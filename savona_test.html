@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="savona.js"></script>
+    <script>
+        var msg_str = "Property.Set.Value"
+        var msg_str_code = msgpack.pack(msg_str)
+        var msg_str_decode = msgpack.unpack(msg_str_code)
+
+        var msg_int = 256
+        var msg_int_code = msgpack.pack(msg_int)
+        var msg_int_decode = msgpack.unpack(msg_int_code)
+
+        var binary_cmd = [148, 0, 72, 177, 80, 114, 111, 112, 101, 114, 116, 121, 46, 83, 101, 116, 86, 97, 108, 117, 101, 145, 130, 180, 67, 97, 109, 101, 114, 97, 46, 78, 68, 70, 105, 108, 116, 101, 114, 46, 77, 111, 100, 101, 166, 80, 114, 101, 115, 101, 116, 181, 67, 97, 109, 101, 114, 97, 46, 78, 68, 70, 105, 108, 116, 101, 114, 46, 86, 97, 108, 117, 101, 16]
+        var binary_cmd_decoded = msgpack.unpack(binary_cmd)
+
+
+        console.log(msg_str)
+        console.log(msg_str_code)
+        console.log(msg_str_decode)
+
+        console.log(msg_int)
+        console.log(msg_int_code)
+        console.log(msg_int_decode)
+        console.log("binary decoded")
+        console.log(binary_cmd_decoded)
+    </script>
+</head>
+<body>
+    <p>
+        test
+    </p>
+
+</body>
+</html>
